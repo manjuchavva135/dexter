@@ -51,3 +51,15 @@ exports.getbyname=async(req,res)=>{
         }
     })
 }
+exports.getbystreamlink=async(req,res)=>{
+    Stream.deleteOne({"streamlink": req.query.streamlink}, function(err, streamdetails) {
+        if (err) {
+            console.log(err);
+            res.status(400).send(err)
+            res.end()
+        }
+        else{
+            res.send("sucesss")
+        }
+    })
+}
