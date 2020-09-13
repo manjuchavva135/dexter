@@ -12,8 +12,7 @@ const streamSchema = new mongoose.Schema(
         topic: {
             type: String,
             trim: true,
-            required: true,
-            unique: true
+            required: true
         },
         streamlink: {
             type: String,
