@@ -7,7 +7,7 @@ const {addstreamdetails, getallstreams,getbyname } = require('../controllers/liv
 
 router.post('/livestream',addstreamdetails);
 
-router.get('/livestream/find', getallstreams);
+router.get('/livestream/find',  requireSignin, isAuth,getallstreams);
 router.get('/livestream/findname', getbyname);
 
 
